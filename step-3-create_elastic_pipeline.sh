@@ -1,9 +1,10 @@
 #!/bin/bash
+#https://github.com/zabbix-book/es-mapping-create/blob/master/step-3-create_elastic_pipeline.sh
 
 ES_URL=http://127.0.0.1:9200
 
 # uint pipeline
-echo -e "create uint pipeline"
+echo  "-----------------------------------create uint pipeline-----------------------------------"
 curl -X PUT \
  ${ES_URL}/_ingest/pipeline/uint-pipeline \
  -H 'content-type:application/json' \
@@ -20,10 +21,11 @@ curl -X PUT \
     }
   ]
 }' 
+echo
 
 
 # dbl pipeline
-echo -e "create dbl pipeline"
+echo  "-----------------------------------create dbl pipeline-----------------------------------"
 curl -X PUT \
  ${ES_URL}/_ingest/pipeline/dbl-pipeline \
  -H 'content-type:application/json' \
@@ -40,9 +42,10 @@ curl -X PUT \
     }
   ]
 }'
+echo
 
 # str pipeline
-echo -e "create str pipeline"
+echo "-----------------------------------create str pipeline-----------------------------------"
 curl -X PUT \
  ${ES_URL}/_ingest/pipeline/str-pipeline \
  -H 'content-type:application/json' \
@@ -59,9 +62,10 @@ curl -X PUT \
     }
   ]
 }'
+echo
 
 # text pipeline
-echo -e "create text pipeline"
+echo "-----------------------------------create text pipeline-----------------------------------"
 curl -X PUT \
  ${ES_URL}/_ingest/pipeline/text-pipeline \
  -H 'content-type:application/json' \
@@ -78,9 +82,10 @@ curl -X PUT \
     }
   ]
 }'
+echo
 
 # log pipeline
-echo -e "create log pipeline"
+echo "-----------------------------------create log pipeline-----------------------------------"
 curl -X PUT \
  ${ES_URL}/_ingest/pipeline/log-pipeline \
  -H 'content-type:application/json' \
@@ -97,3 +102,4 @@ curl -X PUT \
     }
   ]
 }'
+echo

@@ -1,9 +1,10 @@
 #!/bin/bash
+#https://github.com/zabbix-book/es-mapping-create/blob/master/step-2-create_elastic_template.sh
 
 ES_URL=http://127.0.0.1:9200
 
 # uint template
-echo -e "create uint template"
+echo "-----------------------------------create uint template-----------------------------------"
 curl -X PUT \
 ${ES_URL}/_template/uint_template \
  -H 'content-type:application/json' \
@@ -33,9 +34,10 @@ ${ES_URL}/_template/uint_template \
       }
    }
 }'
+echo
 
 # dbl template
-echo -e "create dbl template"
+echo "-----------------------------------create dbl template-----------------------------------"
 curl -X PUT \
 ${ES_URL}/_template/dbl_template  \
  -H 'content-type:application/json' \
@@ -65,9 +67,10 @@ ${ES_URL}/_template/dbl_template  \
       }
    }
 }'
+echo
 
 # str template
-echo -e "create str template"
+echo "-----------------------------------create str template-----------------------------------"
 curl -X PUT \
 ${ES_URL}/_template/str_template  \
  -H 'content-type:application/json' \
@@ -105,9 +108,10 @@ ${ES_URL}/_template/str_template  \
       }
    }
 }'
+echo
 
 # text template
-echo -e "create text template"
+echo "-----------------------------------create text template-----------------------------------"
 curl -X PUT \
 ${ES_URL}/_template/text_template  \
  -H 'content-type:application/json' \
@@ -145,9 +149,10 @@ ${ES_URL}/_template/text_template  \
       }
    }
 }'
+echo
 
 # log template
-echo -e "create log template"
+echo "-----------------------------------create log template-----------------------------------"
 curl -X PUT \
 ${ES_URL}/_template/log_template  \
  -H 'content-type:application/json' \
@@ -185,3 +190,4 @@ ${ES_URL}/_template/log_template  \
       }
    }
 }'
+echo

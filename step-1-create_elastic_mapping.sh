@@ -3,6 +3,7 @@
 ES_URL=http://127.0.0.1:9200
 
 # uint mapping
+echo -e "create uint mapping"
 curl -X PUT \
 ${ES_URL}/uint \
  -H 'content-type:application/json' \
@@ -32,6 +33,7 @@ ${ES_URL}/uint \
 }'
 
 # dbl mapping
+echo -e "create dbl mapping"
 curl -X PUT \
 ${ES_URL}/dbl \
  -H 'content-type:application/json' \
@@ -61,6 +63,7 @@ ${ES_URL}/dbl \
 }'
 
 # str mapping
+echo -e "create str mapping"
 curl -X PUT \
 ${ES_URL}/str \
  -H 'content-type:application/json' \
@@ -98,6 +101,7 @@ ${ES_URL}/str \
 }'
 
 # text mapping
+echo -e "create text mapping"
 curl -X PUT \
 ${ES_URL}/text \
  -H 'content-type:application/json' \
@@ -135,6 +139,7 @@ ${ES_URL}/text \
 }'
 
 # log mapping
+echo -e "create log mapping"
 curl -X PUT \
 ${ES_URL}/log \
  -H 'content-type:application/json' \

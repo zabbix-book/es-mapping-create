@@ -3,6 +3,7 @@
 ES_URL=http://127.0.0.1:9200
 
 # uint template
+echo -e "create uint template"
 curl -X PUT \
 ${ES_URL}/_template/uint_template \
  -H 'content-type:application/json' \
@@ -34,6 +35,7 @@ ${ES_URL}/_template/uint_template \
 }'
 
 # dbl template
+echo -e "create dbl template"
 curl -X PUT \
 ${ES_URL}/_template/dbl_template  \
  -H 'content-type:application/json' \
@@ -65,6 +67,7 @@ ${ES_URL}/_template/dbl_template  \
 }'
 
 # str template
+echo -e "create str template"
 curl -X PUT \
 ${ES_URL}/_template/str_template  \
  -H 'content-type:application/json' \
@@ -104,6 +107,7 @@ ${ES_URL}/_template/str_template  \
 }'
 
 # text template
+echo -e "create text template"
 curl -X PUT \
 ${ES_URL}/_template/text_template  \
  -H 'content-type:application/json' \
@@ -143,6 +147,7 @@ ${ES_URL}/_template/text_template  \
 }'
 
 # log template
+echo -e "create log template"
 curl -X PUT \
 ${ES_URL}/_template/log_template  \
  -H 'content-type:application/json' \

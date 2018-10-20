@@ -1,6 +1,10 @@
+#!/bin/bash
+
+ES_URL=http://127.0.0.1:9200
+
 # uint pipeline
 curl -X PUT \
- http://your-elasticsearch.here:9200/_ingest/pipeline/uint-pipeline \
+ ${ES_URL}/_ingest/pipeline/uint-pipeline \
  -H 'content-type:application/json' \
  -d '{
   "description": "daily uint index naming",
@@ -18,7 +22,7 @@ curl -X PUT \
 
 # dbl pipeline
 curl -X PUT \
- http://your-elasticsearch.here:9200/_ingest/pipeline/dbl-pipeline \
+ ${ES_URL}/_ingest/pipeline/dbl-pipeline \
  -H 'content-type:application/json' \
  -d '{
   "description": "daily dbl index naming",
@@ -36,7 +40,7 @@ curl -X PUT \
 
 # str pipeline
 curl -X PUT \
- http://your-elasticsearch.here:9200/_ingest/pipeline/str-pipeline \
+ h${ES_URL}/_ingest/pipeline/str-pipeline \
  -H 'content-type:application/json' \
  -d '{
   "description": "daily str index naming",
@@ -54,7 +58,7 @@ curl -X PUT \
 
 # text pipeline
 curl -X PUT \
- http://your-elasticsearch.here:9200/_ingest/pipeline/text-pipeline \
+ ${ES_URL}/_ingest/pipeline/text-pipeline \
  -H 'content-type:application/json' \
  -d '{
   "description": "daily text index naming",
@@ -72,7 +76,7 @@ curl -X PUT \
 
 # log pipeline
 curl -X PUT \
- http://your-elasticsearch.here:9200/_ingest/pipeline/log-pipeline \
+ ${ES_URL}/_ingest/pipeline/log-pipeline \
  -H 'content-type:application/json' \
  -d '{
   "description": "daily log index naming",

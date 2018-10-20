@@ -3,6 +3,7 @@
 ES_URL=http://127.0.0.1:9200
 
 # uint pipeline
+echo -e "create uint pipeline"
 curl -X PUT \
  ${ES_URL}/_ingest/pipeline/uint-pipeline \
  -H 'content-type:application/json' \
@@ -18,9 +19,11 @@ curl -X PUT \
       }
     }
   ]
-}'
+}' 
+
 
 # dbl pipeline
+echo -e "create dbl pipeline"
 curl -X PUT \
  ${ES_URL}/_ingest/pipeline/dbl-pipeline \
  -H 'content-type:application/json' \
@@ -39,8 +42,9 @@ curl -X PUT \
 }'
 
 # str pipeline
+echo -e "create str pipeline"
 curl -X PUT \
- h${ES_URL}/_ingest/pipeline/str-pipeline \
+ ${ES_URL}/_ingest/pipeline/str-pipeline \
  -H 'content-type:application/json' \
  -d '{
   "description": "daily str index naming",
@@ -57,6 +61,7 @@ curl -X PUT \
 }'
 
 # text pipeline
+echo -e "create text pipeline"
 curl -X PUT \
  ${ES_URL}/_ingest/pipeline/text-pipeline \
  -H 'content-type:application/json' \
@@ -75,6 +80,7 @@ curl -X PUT \
 }'
 
 # log pipeline
+echo -e "create log pipeline"
 curl -X PUT \
  ${ES_URL}/_ingest/pipeline/log-pipeline \
  -H 'content-type:application/json' \
